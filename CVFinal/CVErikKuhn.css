@@ -1,0 +1,211 @@
+header {
+    width: 100%;
+    height: 200px;
+    background-color:#222;
+    color: #fff;
+    text-align: right;
+    padding-right: 3%;
+    overflow: hidden;
+    display: block;
+}
+
+.horizontal_center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.horizontal_left {
+    position: relative;
+    left: 5%;
+    transform: translateX(10%);
+}
+.user_photo {    
+    position: relative;
+    background: #fff;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 5px solid rgba(0,0,0,.25);
+    float: left;
+}
+
+.user_photo img{
+    width: 100%;
+    border-radius: 50%;
+    overflow-clip-margin: content-box;
+    overflow: clip;    
+}
+
+.hcab {
+    position:relative;
+    vertical-align: center;
+    float: right;
+    right: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+h1 {
+    text-align: right;
+    text-size-adjust: auto;
+    size: 50pt;
+    color: antiquewhite;
+}
+h2 {
+    text-size-adjust: auto;
+    text-align: right;
+    size: 30pt;
+    color: #fff;
+}
+ul{
+    list-style-type: none;
+    display: inline;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar a {
+    border-style:  hidden hidden hidden solid;
+    border-color: darkgrey;
+    float: left;
+    margin: 0px;
+    padding: 5px 10px;
+    height: 80%;
+    vertical-align:middle;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-size: large;
+    text-decoration: none;
+}
+.active{
+    background-color:darkgrey;
+    color: #222;
+}
+.navbar a:hover{
+    background-color: darkgrey;
+    color: #222;
+
+}
+.navbar{ 
+        position:fixed;
+        top: 2%;
+        text-align: left;
+        width: 100%;
+        height: 60px;
+        background: #222;
+        color: #fff;
+        z-index: 6;    
+        margin-right: 20px;
+        margin-top: 5px;    
+        display: inline;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    /*background-color: midnightblue;*/
+}
+
+
+@media screen and (max-width: 1114px) {
+    .navbar{    
+        text-align: left;
+        position:relative;
+        width: 50px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: #222;
+        color: #fff;
+        z-index: 100;
+        transform: translateX(300px);
+        transition: all .25s ease-in-out;
+        animation: bounceHint 1s ease;
+    }    
+    .navbar a {
+        float: none;
+        display: block;
+      }
+    .navbar ul{
+        display: block;
+        width: 90%;
+        align-items: center;
+    }
+}
+
+.card {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 50%);
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+@media screen and (max-width: 750px){
+.frame {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+}
+@media screen and (max-width: 400px){
+.card_offset {
+    margin-top: -5px;
+}
+}
+.card_offset {
+    margin-top: -10px;
+}
+.frame {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: -20px;
+    overflow: hidden;
+}
+
+.tabcontrol{
+    width: 100%;
+    display: inline;
+    padding-left: 0.5%;    
+    padding-right: 0.5%;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  .defaultOpen {
+    display: block;
+  }
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
