@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Curriculum Vitae - Erik E. Kuhn</title>
 
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CVErikKuhn.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   
+     <!--Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    
 </head>
-<body class="active">
-    <div id="navbar" class="navbar">
-        <div class="nav_toggle">
-         <div class="icon">
-         </div>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bd-navbar" id="menu">
+        <button class="navbar-toggler d-flex d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas-sm offcanvas-end mx-auto" tabindex="-1" id="menuNavbar" aria-labelledby="menuNavbarOffCanvasLabel" data-bs-scroll="true" aria-modal="true" role="dialog">
+            <div class="offcanvas-header bg-dark text-light px-2">
+                <h3 class="offcanvas-title" id="menuNavbarOffCanvasLabel">Menu</h3>
+                <button 
+                    type="button" 
+                    class="btn-close btn-close-white" 
+                    id="btMenuNavbarClose"
+                    data-bs-dismiss="offcanvas" 
+                    aria-label="Close" 
+                    data-bs-target="#menuNavbar">
+                </button>
+            </div>
+            <div class="offcanvas-body p-3 pt-0 p-lg-0 bg-dark">
+                <hr class="d-lg-none text-light-50"></hr>
+                <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+                    <li class="nav-item px-2">
+                        <a class="nav-link py-2 px-0 px-lg-4" aria-current="true" href="#cardInfo" type="button" id="btMenuDatosPersonales" >Datos Personales</a>
+                    </li>    
+                    <li class="nav-item px-2">
+                        <a class="nav-link py-2 px-0 px-lg-4" aria-current="false" href="#cardInfo" type="button" id="btMenuFormacionAcademica">Formación Académica</a>
+                   </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link py-2 px-0 px-lg-4" aria-current="false" href="#cardInfo" type="button" id="btMenuExperienciaLaboral">Experiencia Laboral</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <ul>
-            <li>
-                <a href="index"><i class="fa fa-home"></i> Home </a>
-            </li>
-            <li>
-                <a href="formacion-academica"><i class="fa fa-file"></i> 
-                    Formación Académica
-                </a>
-            </li>
-            <li>
-                <a href="experiencia-laboral"><i class="fa fa-bars"></i>
-                    Experiencia Laboral
-                </a>
-            </li>
-            <li class="blank"></li>
-        </ul>
-      
-    </div>
-    <header>        
-        <div class="user_photo horizontal_left" id="user_photo">
-            <img name="Erik Kuhn" src="https://pbs.twimg.com/profile_images/1584127825220698118/D6fYiabc_400x400.jpg" alt=" Imagen no disponible.">
+    </nav>
+    <header class="container-fluid align-items-center pt-4 mb-4 bg-dark text-light">        
+        <div class="container align-center float-none p-2" id="user_photo">
+            <img class="rounded-circle d-block img-thumbnail border-light mx-auto" name="Erik Kuhn" src="https://pbs.twimg.com/profile_images/1584127825220698118/D6fYiabc_400x400.jpg" alt=" Imagen no disponible.">
         </div>
-        <div class="hcab"> 
+        <div class="container h-4 bg-dark mt-4 pt-md-4 text-center"> 
             <h1> Curriculum Vitae </h1>
             <h2> Erik Eduardo Kuhn </h2>
         </div>
@@ -52,105 +59,156 @@
 
     </header>
 
-
-    <div class="frame card_offset">
+    <div class="frame card_offset" id="cardInfo">
         <div class="card">
-            <div class="tabcontrol btn-toolbar" role="toolbar" aria-label="Secciones">
-                <button type="button" class="tablink btn btn-secondary" onclick="" class="defaultOpen"> Datos Personales</button>
-                <button type="button" class="tablink btn btn-secondary" onclick=""> Formación Académica </button>
-                <button type="button" class="tablink btn btn-secondary" onclick=""> Experiencia Laboral </button>
-            </div>
-            <div class="details">            
-                <div id="datos-personales" class="tabcontent">
-                    <ul> 
-                        <li> 
-                            <h5>Teléfono:</h5> 
-                            <p>+56 9 3148 7586</p>                    
-                        </li>
-                        <li>
-                            <h5> Dirección:</h5>
-                            <p>Av. Héroes de la concepción 1994, Iquique, Chile</p>
-                        </li> 
-                    
-                        <li> 
-                            <h5>Nacimiento:</h5>
-                            <p>16/02/1991</p>
-                        </li>
-                        <li> 
-                            <h5>DNI:</h5> 
-                            <p>35.620.676 </p>
-                        </li>
-                    </ul>
+            <div class="row" id="row-pestanias">
+                <div class="col-3 bg-light" id="col-pestanias">
+                    <div class="list-group" id="list-secciones" role="tablist">
+                        <a 
+                            class="list-group-item list-group-item-action active" 
+                            id="tmDatosPersonales" 
+                            data-toogle="list" 
+                            href="#list-datospersonales" 
+                            role="tab"
+                            aria-controls="list-datospersonales"
+                            aria-selected="true">
+                            Datos Personales 
+                        </a>
+                        <a 
+                            class="list-group-item list-group-item-action" 
+                            id="tmFormacionAcademica" 
+                            data-toogle="list" 
+                            href="#list-formacionacademica" 
+                            role="tab"
+                            aria-controls="list-formacionacademica"
+                            aria-selected="false">
+                            Formación Académica
+                        </a>
+                        <a class="list-group-item list-group-item-action" 
+                        id="tmExperienciaLaboral" 
+                        data-toogle="list" 
+                        href="#list-experiencialaboral" 
+                        role="tab"
+                        aria-controls="list-experiencialaboral"
+                        aria-selected="false">
+                            Experiencia Laboral
+                        </a>
+                    </div>                
                 </div>
-                <div id="formacion-academica" class="tabcontent">
-                    <h3> Formación Académica </h3>
-                    <ul>
-                        <li>
-                            <h5>1997-2005 Primaria completa </h5>
-                            <p>	Instituto Juan Gutenberg, Mar del Plata, Buenos Aires, Argentina </p>
-                        </li>
-                        <li>
-                            <h5> 2006-2009	Bachiller en Economía </h5>
-                            <p> Escuela de Educación Técnica Nº5, Mar del Plata, Buenos Aires, Argentina </p>
-                        </li>
-                        
-                        <li>
-                            <h5>2006-2009  Técnico en Informática Personal y Profesional </h5>
-                            <p>Escuela de Educación Técnica Nº5, Mar del Plata, Buenos Aires, Argentina </p>
-                        </li> 
-        
-                        <li>
-                            <h5> 2009-2013 Ingeniería  en Sistemas (Incompleta)</h5>
-                            <p>Universidad CAECE, Mar del Plata, Buenos Aires, Argentina</p>
-                        </li>
-                    </ul>
-                </div>        
-                <div id="experiencia-laboral" class="tabcontent">
-                    <h3>Experiencia Laboral</h3>
-                    <ul>
-                        <li>
-                            <h5>SEP 2012/2017 EPSAI S.A. - Distribuidora de pinturas Sherwin Williams</h5>    
-                            <p> Puesto:  Administrativo. Encargado de Laboratorio.  Atención al público, ventas, compras.</p>
-                        </li>
-                        <li>
-                            <h5>ENE/MAR 2018	Bulldog Sport Bar - Iquique, Chile</h5>
-                            <p>Puesto:	Bartender.</p>
-                        </li>
-                        <li>
-                            <h5>MAR 2018/JUL 2019	Bar Radicales, Iquique</h5>
-                            <p>Puesto:	Camarero. </p>                
-                        </li>
-                        <li>
-                            <h5>MAR /JUL 2019	Radicales BISTRO ZOFRI, IQQ</h5>
-                            <p>Puesto: Encargado</p>
-                        </li>
-        
-                        <li>
-                            <h5>JUL/FEB 2020   La Barra Sport Bar, Iqq </h5>
-                            <p>Puesto: Camarero, Cajero, Encargado.</p>
-                        </li>
-                        <li>
-                            <h5>ABR 2020/MAR 2022: Larsoft, Mar del Plata, Argentina.</h5>
-                            <p>Puesto:	Servicio técnico y desarrollador, Sistema de Gestión Comercial SigCo.</p>
-                        </li>
-                    </ul>
-                </div>
-               <!-- <p id="user_value" style="text-transform: capitalize;"> Erik Eduardo Kuhn</p>
+
+                <div class="col-9" id="col-pestanias-contenido">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div 
+                            class="tab-pane fade show active" 
+                            id="list-datospersonales" 
+                            role="tabpanel" 
+                            aria-labelledby="tmDatosPersonales"
+                            >
+                            <h3> Datos Personales </h3>
+                            <ul> 
+                                <li> 
+                                    <h5>Teléfono:</h5> 
+                                    <p> <a href="tel:+56931487586">+56 9 3148 7586</a></p>
+                                    <p> 
+                                    <a href="https://wa.me/56931487586" target="_blank"> Whatsapp </a>
+                                    </p>
+                                                        
+                                </li>
+                                <li>
+                                    <h5>Email:</h5>
+                                    <p> <a href="mailto: erik.e.kuhn@gmail.com">erik.e.kuhn@gmail.com</a></p>
+                                </li>
+
+
+                                <li>
+                                    <h5> Dirección:</h5>
+                                    <p>Av. Héroes de la concepción 1994, Iquique, Chile</p>
+                                </li> 
+                            
+                                <li> 
+                                    <h5>Nacimiento:</h5>
+                                    <p>16/02/1991</p>
+                                </li>
+                                <li> 
+                                    <h5>DNI:</h5> 
+                                    <p>35.620.676 </p>
+                                </li>
+                            </ul>    
+                        </div>
+                        <div 
+                            class="tab-pane fade" 
+                            id="list-formacionacademica" 
+                            role="tabpanel" 
+                            aria-labelledby="tmFormacionAcademica"
+                            >
+                            <h3> Formación Académica </h3>
+                            <ul>
+                                <li>
+                                    <h5>1997-2005 Primaria completa </h5>
+                                    <p>	Instituto Juan Gutenberg, Mar del Plata, Buenos Aires, Argentina </p>
+                                </li>
+                                <li>
+                                    <h5> 2006-2009	Bachiller en Economía </h5>
+                                    <p> Escuela de Educación Técnica Nº5, Mar del Plata, Buenos Aires, Argentina </p>
+                                </li>
+                                
+                                <li>
+                                    <h5>2006-2009  Técnico en Informática Personal y Profesional </h5>
+                                    <p>Escuela de Educación Técnica Nº5, Mar del Plata, Buenos Aires, Argentina </p>
+                                </li> 
                 
-                <a href="https://twitter.com/ErikKuhn9" class="twitter">
-                    <img src="img/twitter.png"> "@ErikKuhn9"
-                </a>-->
+                                <li>
+                                    <h5> 2009-2013 Ingeniería  en Sistemas (Incompleta)</h5>
+                                    <p>Universidad CAECE, Mar del Plata, Buenos Aires, Argentina</p>
+                                </li>
+                            </ul>    
+                        </div>
+                        <div class="tab-pane fade" id="list-experiencialaboral" role="tabpanel" aria-labelledby="tmExperienciaLaboral">
+                            <h3>Experiencia Laboral</h3>
+                            <ul>
+                                <li>
+                                    <h5>SEP 2012/2017 EPSAI S.A. - Distribuidora de pinturas Sherwin Williams</h5>    
+                                    <p> Puesto:  Administrativo. Encargado de Laboratorio.  Atención al público, ventas, compras.</p>
+                                </li>
+                                <li>
+                                    <h5>ENE/MAR 2018	Bulldog Sport Bar - Iquique, Chile</h5>
+                                    <p>Puesto:	Bartender.</p>
+                                </li>
+                                <li>
+                                    <h5>MAR 2018/JUL 2019	Bar Radicales, Iquique</h5>
+                                    <p>Puesto:	Camarero. </p>                
+                                </li>
+                                <li>
+                                    <h5>MAR /JUL 2019	Radicales BISTRO ZOFRI, IQQ</h5>
+                                    <p>Puesto: Encargado</p>
+                                </li>
+                
+                                <li>
+                                    <h5>JUL/FEB 2020   La Barra Sport Bar, Iqq </h5>
+                                    <p>Puesto: Camarero, Cajero, Encargado.</p>
+                                </li>
+                                <li>
+                                    <h5>ABR 2020/MAR 2022: Larsoft, Mar del Plata, Argentina.</h5>
+                                    <p>Puesto:	Servicio técnico y desarrollador, Sistema de Gestión Comercial SigCo.</p>
+                                </li>
+                            </ul>   
+                        </div>
+                    </div>    
+                </div>                    
             </div>
         </div>
-    </div>
+    </div>               
 
-    <main>
-        
-    </main>
-    <script type="text/javascript">
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-42942064-1', 'randomuser.me');ga('send', 'pageview');
-    </script>  
+    <footer>
+        <div>
+            <a href="" ></a>
+        </div>
+    </footer>
+
   <!-- Bootstrap script  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+  <script src="js/index.js" type="text/javascript"></script>
 </body>
 </html>
